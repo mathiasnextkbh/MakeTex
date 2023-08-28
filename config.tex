@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Standard packages
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+%\usepackage{calculator}
+
+\usepackage{chemfig}
+
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+
+\usepackage[top=3.14cm, bottom=3cm, outer=2.5cm, inner=2.5cm]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{lastpage}
+
+\usepackage{mathtools}
+
+\usepackage{mhchem}
+
+\usepackage{multicol}
+
+%\usepackage{multirow}
+
+\usepackage{pgfplots}
+
+%\usepackage{pgf-pie}
+
+\usepackage{tikz}
+
+%\usepackage{titling}
+
+\usepackage{lipsum}
+
+\usepackage[bottom]{footmisc}
+
+\usepackage{xcolor,colortbl}
+
+\usepackage{mdframed}
+
+\usepackage[backend=bibtex]{biblatex}
+
+\usepackage{csquotes}
+
+\usepackage{anyfontsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Package settings
+
+\pgfplotsset{compat=1.18}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document settings
+
+\pagestyle{fancy}
+
+\fancyhead{}	
+\fancyfoot{}
+
+\fancyhead[l]{\title{}}
+\fancyhead[r]{\author{}}
+
+\fancyfoot[l]{\school}
+\fancyfoot[r]{Side \thepage{}\hspace{1mm}af~\pageref{LastPage}}
+
+\renewcommand{\contentsname}{Indhold}
+
+\renewcommand{\maketitle}{
+	\begin{center}        
+        {\fontsize{32pt}{32pt}\selectfont \title{}}
+
+        \vspace{0.25cm}
+
+        {\fontsize{16pt}{16pt}\selectfont \author{}, \subject{}}
+
+        \vspace{0.15cm}
+
+        {\fontsize{12pt}{12pt}\selectfont \textcolor{black!65}{\date{}} }
+    \end{center}
+}
+
+\newcommand{\articlebreak}{
+	\\
+
+	\noindent
+}
+
+\def\RED{\gdef\printatom##1{\color{red}\ensuremath{\mathrm{##1}}}}
+\def\BLUE{\gdef\printatom##1{\color{blue}\ensuremath{\mathrm{##1}}}}
+\def\BLACK{\gdef\printatom##1{\color{black}\ensuremath{\mathrm{##1}}}}
+
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{1px}
+
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Commands
+
+\newcommand*\Eval[3]{\bigg[#1\bigg]_{#2}^{#3}}
+
+\DeclareMathOperator{\di}{d\!}
+
+\newcommand*\dydx{\frac{\di y}{\di x}}
+
+\DeclareMathOperator{\txtdeg}{\text{\textdegree{}}}
+
+\DeclareMathOperator{\for}{ \ \text{ for } \ }
+
+\newcommand*\hm[1]{$\displaystyle #1$}
+
+\newcommand*\chs[2]{\section*{\quad {#1}) \indent #2}}
+\newcommand*\chss[2]{\subsection*{\quad {#1}) \indent #2}}
+\newcommand*\chsss[2]{\subsubsection*{\quad {#1}) \indent #2}}
+
+\newcommand*\fx{f_{(x)}}
+
+\newcommand*\img[2]{
+	\begin{center}
+		\includegraphics[width=#1\textwidth]{src/#2}
+	\end{center}
+}
+
+\newcommand*\pu[2]{$#1 \, (#2)$}
+
+\newcommand*\dx{\di x}
+\newcommand*\dy{\di y}
+
+\newcommand*\diff{\frac{\delta x}{\delta y}}
+\newcommand*\diffx{\delta x}
+\newcommand*\diffy{\delta y}
+
+\newcommand{\correct}{\cellcolor[HTML]{08f26e}}
+\newcommand{\xcorrect}{\cellcolor[HTML]{90CE90}}
+\newcommand{\wrong}{\cellcolor[HTML]{ed4337}}
+\newcommand{\xwrong}{\cellcolor[HTML]{E57F7E}}
+\newcommand{\gray}{\cellcolor[HTML]{bbbbbb}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
